@@ -1,0 +1,181 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f7f9f9; /* very light background */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff; /* pure white container */
+            padding: 20px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 22px;
+            text-align: center;
+            color: #556b72; /* soft dark teal */
+            margin: 0 0 20px 0;
+        }
+        .input-div, .radio-div, .button-div, .tip-div {
+            background-color: transparent;
+        }
+        .input-div {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        label {
+            color: #778899; /* light slate gray */
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .input-value {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d3dce6;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #34495e; /* dark slate blue */
+            background-color: #f5f9fc;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .input-value:hover {
+            border-color: #a7bbc7;
+            box-shadow: 0 0 6px rgba(167, 187, 199, 0.5);
+        }
+        .input-value:focus {
+            outline: none;
+            border-color: #5d8aa8;
+            box-shadow: 0 0 8px rgba(93, 138, 168, 0.7);
+        }
+        .radio-div {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+        .radio-div label {
+            font-size: 14px;
+            color: #778899;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .radio-div input[type="radio"] {
+            cursor: pointer;
+            accent-color: #5d8aa8;
+            width: 18px;
+            height: 18px;
+        }
+        .radio-div input[type="radio"]:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+        .tip-div {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        p {
+            margin: 0;
+            font-size: 15px;
+            color: #556b72;
+        }
+        #tip-percentage {
+            font-weight: 700;
+            color: #556b72;
+        }
+        #tip-percentage.high-tip {
+            color: #2ca02c; /* green for tip > 25% */
+        }
+        .range-container {
+            position: relative;
+            width: 100%;
+            height: 12px;
+            background-color: #d9e6eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .range-fill {
+            height: 100%;
+            background-color: #5d8aa8;
+            transition: width 0.5s ease-in-out;
+            border-radius: 8px;
+        }
+        .range-fill.high-tip {
+            background-color: #2ca02c;
+        }
+        input[type="range"] {
+            display: none; /* remove visible range input */
+        }
+        .button-div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            background-color: #5d8aa8;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #47738b;
+        }
+        button:first-of-type {
+            background-color: #a8bed6;
+            color: #34495e;
+        }
+        button:first-of-type:hover {
+            background-color: #47738b;
+            color: #fff;
+        }
+        .tip-result {
+            color: #556b72;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .tip-result.high-tip {
+            color: #2ca02c;
+        }
+        .result {
+            color: #47738b;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 14px;
+            }
+            .radio-div {
+                gap: 15px;
+            }
+        }
